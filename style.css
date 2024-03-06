@@ -1,3 +1,6 @@
+
+
+
 *
 {
     padding: 0px;
@@ -11,8 +14,8 @@
 body
 {
     display: grid;
-    grid: 1fr;
-    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100 auto auto auto;
 
     /* flex-direction: column; */
     /* height:100vh; */
@@ -24,11 +27,16 @@ body
 
 nav
 {
-    display: flex;
-    align-items: center;
-    justify-content:flex-end;
+    display: grid;
+     /* align-items: center;
+    justify-content:flex-end; */
     margin-right: 30px;
-    margin-top: 14px;
+    margin-top: 14px; 
+   
+    grid-template-columns: 1fr 1fr 1fr 2fr ;
+    grid-template-rows: 40px ;
+    grid-column-start: 4;
+    
 
 
 }
@@ -81,14 +89,22 @@ nav button
 }
 .section1
 {
-    flex:1;
+    /* flex:1; */
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 1fr;
+    grid-template-rows: 100px 100px 100px ;
+    grid-column-start: 2;
+    
+
 
 }
 .section1 .logo
 {
-    display: block;
+    display: grid;
     margin: 0px auto;
     margin-top: 107px;
+    grid-column-start: 2;
+    
 
 }
 .main
@@ -102,7 +118,7 @@ nav button
 }
 .main .input
 {
-    display: block;
+    display: grid;
     border: 1px solid #ddd;
     color: rgba(0,0,0,0.87);
     font-size: 16px;
@@ -112,6 +128,8 @@ nav button
     width:100%;
     transition: box-shadow 100ms ;
     outline:none;
+    grid-column-start: 2;
+    
 
 
 
@@ -185,6 +203,13 @@ text-decoration:none;
 footer
 {
     background-color: #f2f2f2;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px  ;
+   
+
+    
+   
+    
 
 } 
 footer h4 
@@ -195,6 +220,7 @@ footer h4
     font-weight: 400;
     padding-left: 29px;
     border:1px solid #eee;
+    grid-column-start: 1;
 
 
 } 
@@ -234,10 +260,21 @@ footer a:hover
 
  @media screen and  (width:767px ;)
  {
-    nav
+    
+    body 
     {
-     display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px 500px 400px 300px;
     }
+    nav 
+    {
+    
+    grid-template-columns: 1fr  ;
+    grid-template-rows: auto ;
+    grid-column-start: 1;
     }
+    
+    }
+
  
 
